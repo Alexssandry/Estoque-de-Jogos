@@ -15,7 +15,7 @@ Estoque de Jogos
 Utilize nas rotas /get /add /put /del
 
 /get : retorna um JSON com os dados do estoque
-/get/"valor de ID" : procura um jogo pelo numero de ID na url e retorna um JSON
+/get/"valor de ID" : procura um jogo pelo numero <br> de ID na url e retorna um JSON
 
 
 /add
