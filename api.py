@@ -10,7 +10,62 @@ banco = Banco()
 
 @BlueP_API.route('/')
 def principal():
-    return 'Estou sendo executado de uma BluePrint'
+    return '''
+    Estoque de Jogos
+<br>
+Utilize nas rotas /get /add /put /del
+<br><br>
+/get : retorna um JSON com os dados do estoque <br>
+/get/"valor de ID" : procura um jogo pelo numero de ID na url e retorna um JSON<br>
+<br><br>
+
+/add <br>
+Rota para adicionar novo jogo recebido via (POST) <br>
+Modelo do JSON: <br>
+[ <br>
+{ <br>
+    "nome" : "nome_jogo", <br>
+    "plataforma" : "console", <br>
+    "quantidade" : 100, <br>
+    "preco" : 130.90 <br>
+} <br>
+] <br>
+
+<br><br>
+/put <br>
+Rota para alterar os dados de um jogo (PUT) <br>
+modelo para JSON <br>
+[ <br>
+{ <br>
+    "id" : 1, <br>
+    "nome" : "nome_jogo", <br>
+    "plataforma" : "console", <br>
+    "quantidade" : 100, <br>
+    "preco" : 130.90 <br>
+}, <br>
+{ <br>
+    # outro produto <br>
+} <br>
+] <br>
+<br><br>
+
+/del <br>
+Rota para remover um jogo via (DELETE) <br>
+Modelo do JSON: <br>
+[ <br>
+{ <br>
+
+    "id" : 1 <br>
+}, <br>
+{ <br>
+
+    "id" : 2 <br>
+} <br>
+] <br>
+
+<br><br>
+
+'''
 
 @BlueP_API.route('/get', methods=['GET'])
 def exibeEstoque():
